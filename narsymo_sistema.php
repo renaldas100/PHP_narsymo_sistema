@@ -1,6 +1,22 @@
 <?php
 
-$d=$_GET['dir'];
+session_start();
+require_once "tikrinamas_prisijungimas.php";
+
+
+if(isset($_GET['logout'])){
+    unset($_SESSION['user_id']);
+    session_destroy();
+    header('location: login.php');
+    die();
+}
+
+
+$d="C:/xampp/htdocs/KOPIJA_TRINTI_dashboard";
+
+if(isset($_GET['dir'])) {
+    $d = $_GET['dir'];
+}
 
 
 if(isset($_GET['delete'])) {
@@ -27,13 +43,18 @@ if(isset($_POST['search'])) {
     $files = scandir($d);
     foreach ($files as $file) {
         if (strpos($search, $file) !== false) {
-            $paieska= "failas rastas- ".$search;
+            $paieska= "Failas rastas- ".$search;
+
+//            $file = fopen($search, "r") or die("Unable to open file!");
+//            echo fread($file,filesize($search));
+//            fclose($file);
+
 //            echo "<a href='file:///$d/zh_tw/png2pdf.pdf' target='_blank'>atidaryti</a>";
 ////            echo strpos($search, $file);
             break;
         }
         else {
-            $paieska= "failas nerastas- ".$search;
+            $paieska= "Failas nerastas. Jūs ieškojote: ".$search;
             break;
         }
     }
@@ -209,13 +230,13 @@ function printDir($dirName){
     }
 
     echo "<tr class='border'>";
-    echo "<td colspan='5'><a href='narsymo_sistema.php?sukurtiKataloga=".$dirName."/Naujas katalogas"."&dir=".$dirName."'>";
+    echo "<td colspan='5'><a class='btn btn-success text-decoration-none' href='narsymo_sistema.php?sukurtiKataloga=".$dirName."/Naujas katalogas"."&dir=".$dirName."'>";
     echo "Sukurti naują katalogą";
     echo "</a></td>";
     echo "</tr>";
 
     echo "<tr>";
-    echo '<p><a href="javascript:history.go(-1)" title="Return to previous page">« Grįžti atgal</a></p>';
+    echo '<p><a href="javascript:history.go(-1)" title="Grįžti atgal">« Grįžti atgal</a></p>';
     echo "</tr>";
 
     closedir($dir);
@@ -294,15 +315,22 @@ function folderSize ($dir)
     <div class="row mt-2 d-flex justify-content-center">
         <div class="col-md-11">
             <div class="card">
-                <div class="card-header">
+                <div class="card-header d-flex justify-content-between">
                     Failų naršymo sistema
+                    <a class="btn btn-success text-decoration-none" href="narsymo_sistema.php?logout=true">Atsijungti</a>
                 </div>
                 <div class="card-body">
+                    <form class="" method="get">
+                        <input type="text" name="dir">
+                        <button class="btn btn-success mt-2 col-2" type="submit">Naršyti kataloge
+                        </button>
+                    </form>
                     <form class="" method="post">
                         <input type="search" name="search">
                         <button class="btn btn-success mt-2 col-2" type="submit">Ieškoti failo
                         </button>
                     </form>
+
                     <div>
                         <?php if(isset($paieska)){ ?>
                         Paieškos rezultatai: <?= $paieska ?><br>
