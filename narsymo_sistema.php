@@ -71,6 +71,8 @@ function printDir($dirName){
     while ($item = readdir($dir)) {
         if($item=='.' || $item=='..') continue;
 
+//        echo $dirName."/".$item."<br>";
+        $back= dirname($dirName."/".$item,2);
 //        echo "<td>";
 
         if(is_dir($dirName."/".$item)) {
@@ -236,7 +238,10 @@ function printDir($dirName){
     echo "</tr>";
 
     echo "<tr>";
-    echo '<p><a href="javascript:history.go(-1)" title="Grįžti atgal">« Grįžti atgal</a></p>';
+    //  BACK 1 VARIANTAS
+    echo '<p><a class="btn btn-success text-decoration-none" href="javascript:history.go(-1)" title="Grįžti atgal">« Grįžti atgal</a></p>';
+    //  BACK 2 VARIANTAS
+//    echo "<a class='btn btn-success text-decoration-none' href='narsymo_sistema.php?dir=".$back."' title='Grįžti atgal'> Grįžti atgal </a>";
     echo "</tr>";
 
     closedir($dir);
