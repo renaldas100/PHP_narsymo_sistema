@@ -2,7 +2,7 @@
 
 Naudotos technologijos: PHP + BOOTSTRAP
 
-1.Užduotis
+1. Užduotis
 
 Sukurta katalogų ir failų išvedimui skirtą internetinė sistema.
 
