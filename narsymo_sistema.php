@@ -177,7 +177,7 @@ function printDir($dirName){
                 echo round(((filesize($dirName."/".$item))/1024),2).' KB';
                 echo "</td>";
 
-                echo "<td>[HTML failas, adresas:".$dirName."/".$item."]</td>";
+                echo "<td>[TXT failas, adresas:".$dirName."/".$item."]</td>";
 
                 echo "<td><a target='_blank' href='edit.php?path=".$dirName."/".$item."&dir=".$dirName."'>";
                 echo "Redaguoti";
@@ -197,7 +197,7 @@ function printDir($dirName){
                 echo round(((filesize($dirName."/".$item))/1024),2).' KB';
                 echo "</td>";
 
-                echo "<td>[HTML failas, adresas:".$dirName."/".$item."]</td>";
+                echo "<td>[failas, adresas:".$dirName."/".$item."]</td>";
 
                 echo "<td><a target='_blank' href='edit.php?path=".$dirName."/".$item."&dir=".$dirName."'>";
                 echo "Redaguoti";
@@ -217,7 +217,7 @@ function printDir($dirName){
                 echo round(((filesize($dirName."/".$item))/1024),2).' KB';
                 echo "</td>";
 
-                echo "<td>[HTML failas, adresas:".$dirName."/".$item."]</td>";
+                echo "<td>[failas, adresas:".$dirName."/".$item."]</td>";
 
                 echo "<td><a target='_blank' href='edit.php?path=".$dirName."/".$item."&dir=".$dirName."'>";
                 echo "Redaguoti";
