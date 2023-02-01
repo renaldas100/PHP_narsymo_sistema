@@ -2,7 +2,8 @@
 
 Naudotos technologijos: PHP + BOOTSTRAP
 
-1. Užduotis
+1.Užduotis
+
 Sukurta katalogų ir failų išvedimui skirtą internetinė sistema.
 
     Užkrovus pirmą puslapį atvaizduojamas tam tikro katalogo turinys (jame esantys katalogai ir failai).
@@ -11,7 +12,7 @@ Sukurta katalogų ir failų išvedimui skirtą internetinė sistema.
 
 Paspaudus ant failo atliekami tokie veiksmai:
 
-     jei failas .txt, .php, naujame lange atsidaro text area kurioje galima koreguoti failą ir jį išsaugoti.
+jei failas .txt, .php, naujame lange atsidaro text area kurioje galima koreguoti failą ir jį išsaugoti.
 
 
 Visame failų sąraše taip pat yra mygtukai - redaguoti, ištrinti  (mygtukas redaguoti atlieka tą patį ką ir paspaudus ant failo pavadinimo), paspaudus mygtuką ištrinti failas ištrinamas.
@@ -23,6 +24,7 @@ Padaryta taip, kad failų sąraše atitinkamiem failam būtų įdėtos skirtingo
 Puslapio viršuje yra paieškos laukelis kuriame įvedus failo pavadinimą rekursinių funkcijų pagalba yra atliekama failų paieška serveryje.
 
 2. Užduotis
+
 Parašyta rekursinė funkcija dviejų natūraliųjų skaičių didžiausiam bendram dalikliui
 (dbd) rasti, remiantis tokiomis dbd savybėmis:
 dbd(a, b) = a, jei a = b;
