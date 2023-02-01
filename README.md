@@ -23,6 +23,8 @@ Padaryta taip, kad failų sąraše atitinkamiem failam būtų įdėtos skirtingo
 
 Puslapio viršuje yra paieškos laukelis kuriame įvedus failo pavadinimą rekursinių funkcijų pagalba yra atliekama failų paieška serveryje.
 
+Sukurtas prisijungimas skirtas failų naršyklei. Failus matyti ir parsisiųsti gali tik vartotojai tinkamai prisijungę prie sistemos.
+
 2. Užduotis
 
 Parašyta rekursinė funkcija dviejų natūraliųjų skaičių didžiausiam bendram dalikliui
