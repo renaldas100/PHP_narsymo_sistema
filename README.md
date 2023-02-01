@@ -6,9 +6,9 @@ Naudotos technologijos: PHP + BOOTSTRAP
 
 Sukurta katalogų ir failų išvedimui skirtą internetinė sistema.
 
-    Užkrovus pirmą puslapį atvaizduojamas tam tikro katalogo turinys (jame esantys katalogai ir failai).
-    Paspaudus ant katalogo atsidaro (tame pačiame puslapyje) to katalogo turinys (katalogai ir failai).
-    Šalia katalogų atvaizduotas ir bendras to katalogo dydis (rekursiškai susumuoti visi failai kurie yra tame kataloge)
+Užkrovus pirmą puslapį atvaizduojamas tam tikro katalogo turinys (jame esantys katalogai ir failai).
+Paspaudus ant katalogo atsidaro (tame pačiame puslapyje) to katalogo turinys (katalogai ir failai).
+Šalia katalogų atvaizduotas ir bendras to katalogo dydis (rekursiškai susumuoti visi failai kurie yra tame kataloge)
 
 Paspaudus ant failo atliekami tokie veiksmai:
 
